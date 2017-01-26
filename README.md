@@ -11,6 +11,11 @@ This is a hybrid mobile application developed by a group of team mates who enjoy
   * to the next team mate scheduled to make coffee
 * Send messages to other app users as notifications
 
+# Architecture
+
+* Ionic 2
+* Angular 2
+
 ## Instalation
 
 To be written.
