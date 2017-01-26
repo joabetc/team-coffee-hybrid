@@ -1,8 +1,12 @@
 # team-coffee-hybrid
 
-## Purpose
+## What is this?
 
 This is a hybrid mobile application developed by a group of team mates who enjoy a good cup of coffe.
+
+## Purpose
+
+Create an application that sends notifications to the participants in the coffee group, telling them who it is to bring the ingredients (coffee powder and sugar) or who it is to make the coffee.
 
 ## Main functionalities
 
