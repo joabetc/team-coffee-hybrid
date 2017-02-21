@@ -31,6 +31,6 @@ export class MyApp implements OnInit {
   }
 
   ngOnInit(): void {
-    this.getUsers();
+    //this.getUsers();
   }
 }
