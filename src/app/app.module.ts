@@ -5,6 +5,13 @@ import { HomePage } from '../pages/home/home';
 import { FabToolbar } from './components/fab-toolbar/fab-toolbar';
 import { RankingComponent } from './components/ranking/ranking.component';
 import { MessagesComponent } from './components/messages/messages.component';
+import { CloudSettings, CloudModule } from '@ionic/cloud-angular';
+
+const cloudSettings: CloudSettings = {
+  'core': {
+    'app_id': 'fc94448e'
+  }
+}
 
 @NgModule({
   declarations: [
@@ -15,7 +22,8 @@ import { MessagesComponent } from './components/messages/messages.component';
     MessagesComponent
   ],
   imports: [
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    CloudModule.forRoot(cloudSettings)
   ],
   bootstrap: [IonicApp],
   entryComponents: [
