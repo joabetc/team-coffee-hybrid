@@ -1,8 +1,13 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Team Coffee
+      Welcome to Team Coffee, {{ user.details.name }}
     </ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="logout()">
+        <ion-icon name="exit"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 

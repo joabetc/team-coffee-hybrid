@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Team Coffee
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding style="background: url(assets/images/coffee_bckgrnd.png) no-repeat center;background-size:cover;">
+  <ion-list>
+    <div *ngIf="showLogin">
+
+      <ion-item >
+        <ion-label fixed>E-mail</ion-label>
+        <ion-input type="email" [(ngModel)]="email"></ion-input>
+      </ion-item>
+    
+      <ion-item>
+        <ion-label fixed>Password</ion-label>
+        <ion-input type="password" [(ngModel)]="pass"></ion-input>
+      </ion-item>
+    </div>
+
+    <div *ngIf="!showLogin">
+      <ion-item >
+        <ion-label fixed>Username</ion-label>
+        <ion-input type="text" [(ngModel)]="name"></ion-input>
+      </ion-item>
+
+      <ion-item >
+        <ion-label fixed>E-mail</ion-label>
+        <ion-input type="email" [(ngModel)]="email"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label fixed>Password</ion-label>
+        <ion-input type="password" [(ngModel)]="pass"></ion-input>
+      </ion-item>
+    </div>
+
+  </ion-list>
+
+  <div padding>
+    <button ion-button color="primary" block (click)="doLogin()">Login</button>
+    <button ion-button color="primary" block (click)="signUp()">Register</button>
+  </div>
+</ion-content>

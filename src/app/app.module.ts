@@ -1,6 +1,7 @@
 import { NgModule, ErrorHandler } from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
+import { LoginPage } from '../pages/login/login';
 import { HomePage } from '../pages/home/home';
 import { FabToolbar } from './components/fab-toolbar/fab-toolbar';
 import { RankingComponent } from './components/ranking/ranking.component';
@@ -16,6 +17,7 @@ const cloudSettings: CloudSettings = {
 @NgModule({
   declarations: [
     MyApp,
+    LoginPage,
     HomePage,
     FabToolbar,
     RankingComponent,
@@ -28,6 +30,7 @@ const cloudSettings: CloudSettings = {
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
+    LoginPage,
     HomePage,
     FabToolbar,
     RankingComponent,

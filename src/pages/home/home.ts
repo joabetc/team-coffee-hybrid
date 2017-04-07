@@ -1,10 +1,9 @@
 import { Component } from '@angular/core';
-
 import { NavController, ActionSheetController, AlertController, FabContainer } from 'ionic-angular';
-
 import { Ranking } from '../../app/components/ranking/ranking';
-
 import { Messages } from '../../app/components/messages/messages';
+import { Auth, User } from '@ionic/cloud-angular';
+import { LoginPage } from '../login/login';
 
 const RANKING: Ranking[] = [
     {
@@ -74,7 +73,9 @@ export class HomePage {
   constructor(
     public navCtrl: NavController, 
     public actionSheetCtrl: ActionSheetController, 
-    public alertCtrl: AlertController
+    public alertCtrl: AlertController,
+    public user: User,
+    public auth: Auth
     ) { }
 
   public buttons =  [
@@ -165,5 +166,10 @@ export class HomePage {
       ]
     });
     prompt.present();
+  }
+
+  logout() {
+    this.auth.logout();
+    this.navCtrl.setRoot(LoginPage);
   }
 }
