@@ -20,7 +20,7 @@ export class UserService {
             .catch(this.handleError);
     }
 
-    getUser(id: String): Promise<User[]> {
+    getUser(id: String): Promise<User> {
         const url = `${this.usersUrl}/${id}`;
         return this.http.get(url)
             .toPromise()

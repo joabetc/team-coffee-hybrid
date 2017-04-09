@@ -22,7 +22,13 @@ Create an application that sends notifications to the participants in the coffee
 * Ionic 2
 * Angular 2
 
-## Instalation
+## Techonologies
+
+* TypeScript
+* Ionic Cloud Auth
+* Ionic Native
+
+## Development
 
 ```
 $ ionic start --v2 team-coffee-hybrid blank
@@ -31,4 +37,9 @@ $ git init
 $ git remote add origin https://github.com/joabetc/team-coffee-hybrid.git 
 $ git fetch --all
 $ git reset --hard origin/master 
+```
+
+```
+$ npm install @ionic/cloud-angular --save
+$ npm install @ionic-native/core --save
 ```

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Platform } from 'ionic-angular';
-import { StatusBar, Splashscreen } from 'ionic-native';
+import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
 import { LoginPage } from '../pages/login/login';
@@ -12,7 +12,7 @@ import { Auth } from '@ionic/cloud-angular';
 
 @Component({
   templateUrl: 'app.html',
-  providers: [UserService]
+  providers: [UserService, SplashScreen]
 })
 export class MyApp implements OnInit {
   rootPage;
@@ -22,13 +22,13 @@ export class MyApp implements OnInit {
   constructor(
     platform: Platform, 
     private userService: UserService, 
-    public auth: Auth
+    public auth: Auth,
+    private splashScreen: SplashScreen
   ) {
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
-      StatusBar.styleDefault();
-      Splashscreen.hide();
+      splashScreen.hide();
 
       if (this.auth.isAuthenticated()) {
         this.rootPage = HomePage;
