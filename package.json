@@ -44,7 +44,7 @@
     "cordova-plugin-crosswalk-webview"
   ],
   "cordovaPlatforms": [],
-  "description": "team-coffe: An Ionic project",
+  "description": "team-coffee: An Ionic project",
   "config": {
     "ionic_source_map": "source-map"
   }
