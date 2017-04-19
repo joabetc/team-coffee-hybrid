@@ -11,7 +11,7 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding style="background: url(assets/images/coffee_bckgrnd.png) no-repeat center;background-size:cover;">
+<ion-content padding>
 
   <fab-toolbar ion-fixed [enableBackdropDismiss]="enableBackdropDismiss" [color]="color" [icon]="icon" [position]="position"  [buttons]="buttons"></fab-toolbar>
 
@@ -30,13 +30,13 @@
 
   <messages [messageList]="messages"></messages>
 
-  <ion-card style="background-color:rgba(355, 355, 355, 0.85);">
+  <ion-card>
     <ion-card-header>
       Inventory
     </ion-card-header>
     <ion-card-content>
       <ion-list>
-        <ion-item style="background-color:rgba(355, 355, 355, 0.75);">
+        <ion-item>
           Paper filter
           <ion-badge item-right>10 un</ion-badge>
           <button ion-button outline item-right>
@@ -46,7 +46,7 @@
             <ion-icon name="remove"></ion-icon>
           </button>
         </ion-item>
-        <ion-item style="background-color:rgba(355, 355, 355, 0.75);">
+        <ion-item>
           Sugar
           <ion-badge item-right>10 kg</ion-badge>
           <button ion-button outline item-right>
@@ -56,7 +56,7 @@
             <ion-icon name="remove"></ion-icon>
           </button>
         </ion-item>
-        <ion-item style="background-color:rgba(355, 355, 355, 0.75);">
+        <ion-item>
           Coffee pouder
           <ion-badge item-right>10 gr</ion-badge>
           <button ion-button outline item-right>

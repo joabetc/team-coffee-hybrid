@@ -1,10 +1,10 @@
-<ion-card style="background-color:rgba(355, 355, 355, 0.85);">
+<ion-card>
     <ion-card-header>
         Latest Coffee News and Messages
     </ion-card-header>
     <ion-card-content>
         <ion-list>
-            <ion-item *ngFor="let message of messageList" style="background-color:rgba(355, 355, 355, 0.75);">
+            <ion-item *ngFor="let message of messageList">
                 <h2>{{message.message}}</h2>
                 <small>{{message.author}}</small>
                 <ion-note item-right>{{message.when}}</ion-note>

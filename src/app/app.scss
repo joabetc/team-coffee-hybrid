@@ -14,3 +14,18 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+ion-content {
+	background-image: url($background-image-path + "/coffee_bckgrnd.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+@each $ratio, $image-path in $density-path-map {
+
+	@media screen and (-webkit-device-pixel-ratio: $ratio) {
+		background-image: url($image-path + "/coffe_health_benefits.9.png");
+	}
+
+}

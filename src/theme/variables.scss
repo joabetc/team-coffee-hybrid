@@ -1,6 +1,15 @@
 // Ionic Variables and Theming. For more info, please see:
 // http://ionicframework.com/docs/v2/theming/
 $font-path: "../assets/fonts";
+$background-image-path: "../../assets/images";
+
+$density-path-map: (
+  0.75: $background-image-path + "/res/drawable-mdpi",
+  1:    $background-image-path + "/res/drawable-hdpi",
+  1.5:  $background-image-path + "/res/drawable-xhdpi",
+  2:    $background-image-path + "/res/drawable-xxhdpi",
+  2.5:  $background-image-path + "/res/drawable-xxxhdpi"
+);
 
 @import "ionic.globals";
 
