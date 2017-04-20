@@ -16,16 +16,27 @@
 // automatically applied to the <body> element in the app.
 
 ion-content {
-	background-image: url($background-image-path + "/coffee_bckgrnd.png");
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
-}
+};
 
-@each $ratio, $image-path in $density-path-map {
+@mixin respond-to($size, $range) {
+  @each $min, $max in $range {
+    @if $size == small {
+      @media (max-width: $max) { @content; }
+    } @else if $size == extra-large {
+      @media (min-width: $min) { @content; }
+    } @else {
+      @media (min-width: $min) and (max-width: $max) { @content }
+    }
+  }
+};
 
-	@media screen and (-webkit-device-pixel-ratio: $ratio) {
-		background-image: url($image-path + "/coffe_health_benefits.9.png");
+@each $size, $range in $screen-size-path-map {
+  @include respond-to($size, $range) {
+    ion-content {
+		background-image: url(map_get($density-path-map, $size) + "/coffee_health_benefits.9.png");
 	}
-
-}
+  }
+};

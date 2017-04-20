@@ -4,11 +4,19 @@ $font-path: "../assets/fonts";
 $background-image-path: "../../assets/images";
 
 $density-path-map: (
-  0.75: $background-image-path + "/res/drawable-mdpi",
-  1:    $background-image-path + "/res/drawable-hdpi",
-  1.5:  $background-image-path + "/res/drawable-xhdpi",
-  2:    $background-image-path + "/res/drawable-xxhdpi",
-  2.5:  $background-image-path + "/res/drawable-xxxhdpi"
+  small : $background-image-path + "/res/drawable-mdpi",
+  medium: $background-image-path + "/res/drawable-hdpi",
+  large : $background-image-path + "/res/drawable-xhdpi",
+  tablet: $background-image-path + "/res/drawable-xxhdpi",
+  extra-large: $background-image-path + "/res/drawable-xxxhdpi"
+);
+
+$screen-size-path-map: (
+  small : (0px   : 320px),
+  medium: (321px : 375px),
+  large : (376px : 425px),
+  tablet: (426px : 768px),
+  extra-large: (769px : 0px)
 );
 
 @import "ionic.globals";
