@@ -8,7 +8,7 @@ import { LoginPage } from '../pages/login/login';
 import { User } from './services/user.class';
 import { UserService } from './services/user.service';
 
-import { Auth } from '@ionic/cloud-angular';
+import { Auth, Push, PushToken } from '@ionic/cloud-angular';
 
 @Component({
   templateUrl: 'app.html',
@@ -22,8 +22,9 @@ export class MyApp implements OnInit {
   constructor(
     platform: Platform, 
     private userService: UserService, 
+    private splashScreen: SplashScreen,
     public auth: Auth,
-    private splashScreen: SplashScreen
+    public push: Push
   ) {
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
@@ -35,6 +36,16 @@ export class MyApp implements OnInit {
       } else {
         this.rootPage = LoginPage;
       }
+
+      this.push.register().then((pushToken: PushToken) => {
+        return this.push.saveToken(pushToken);
+      }).then((pushToken: PushToken) => {
+        console.log('Token saved: ', pushToken.token);
+      });
+
+      this.push.rx.notification().subscribe((msg) => {
+        console.log('I received an awesome push: ' + msg);
+      });
     });
   }
 

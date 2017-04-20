@@ -11,6 +11,14 @@ import { CloudSettings, CloudModule } from '@ionic/cloud-angular';
 const cloudSettings: CloudSettings = {
   'core': {
     'app_id': 'fc94448e'
+  },
+  'push': {
+    'sender_id': '238436823213',
+    'pluginConfig': {
+      'android': {
+        'sound': true
+      }
+    }
   }
 }
 
