@@ -6,6 +6,7 @@ import { HomePage } from '../pages/home/home';
 import { FabToolbar } from './components/fab-toolbar/fab-toolbar';
 import { RankingComponent } from './components/ranking/ranking.component';
 import { MessagesComponent } from './components/messages/messages.component';
+import { CoffeeFabComponent } from './components/coffee-fab/coffee-fab.component';
 import { CloudSettings, CloudModule } from '@ionic/cloud-angular';
 
 const cloudSettings: CloudSettings = {
@@ -29,7 +30,8 @@ const cloudSettings: CloudSettings = {
     HomePage,
     FabToolbar,
     RankingComponent,
-    MessagesComponent
+    MessagesComponent,
+    CoffeeFabComponent
   ],
   imports: [
     IonicModule.forRoot(MyApp),
@@ -42,7 +44,8 @@ const cloudSettings: CloudSettings = {
     HomePage,
     FabToolbar,
     RankingComponent,
-    MessagesComponent
+    MessagesComponent,
+    CoffeeFabComponent
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
 })
